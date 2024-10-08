@@ -1,6 +1,3 @@
-# OpenSourceRepoTemplate
-OpenSourceRepoTemplate
-
 WalkPointURI
 Overview
 WalkPointURI is an innovative mobile application designed to simplify campus navigation for students at the University of Rhode Island (URI). The app provides personalized maps, walking time estimates, and optimized walking routes between campus locations.
