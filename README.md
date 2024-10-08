@@ -1,56 +1,64 @@
-WalkPointURI
-Overview
-WalkPointURI is an innovative mobile application designed to simplify campus navigation for students at the University of Rhode Island (URI). The app provides personalized maps, walking time estimates, and optimized walking routes between campus locations.
+# WalkPointURI
 
-Key Features
-Time Estimator: Calculates the estimated walking time between two points based on Google Maps walking data.
-Path Suggestions: Offers 2-3 walking route options, with the first being the most optimal based on distance, safety, and user preferences.
-Customizable Campus Maps: Allows users to create personalized maps by marking important campus locations like classrooms and dining halls.
-Technology Stack
-FlutterFlow: Used for rapid app development, providing a user-friendly interface for designing app components.
-Google Firebase: Powers the backend services, including real-time databases to store user preferences and campus maps.
-Google Maps API: Integrated for location services and walking directions.
-Cloud Functions: Used for real-time route optimization and other dynamic features.
-Installation
-Clone the repository:
+## Overview
+**WalkPointURI** is an innovative mobile application designed to simplify campus navigation for students at the University of Rhode Island (URI). The app provides personalized maps, walking time estimates, and optimized routes between campus locations.
 
-bash
-Copy code
-git clone https://github.com/your-repo/WalkPointURI.git
-Navigate to the project directory:
+## Key Features
+- **Time Estimator**: Calculates the estimated walking time between two points using Google Maps walking data.
+- **Path Suggestions**: Offers 2-3 walking routes with the most optimal option based on distance, safety, and user preferences.
+- **Customizable Campus Maps**: Allows users to create personalized maps by marking important campus locations (e.g., classrooms, dining halls).
 
-bash
-Copy code
-cd WalkPointURI
-Install dependencies:
+## Technology Stack
+- **FlutterFlow**: For rapid app development with a user-friendly interface.
+- **Google Firebase**: Backend services, including real-time databases to store user preferences and campus maps.
+- **Google Maps API**: Integrated for location services and walking directions.
+- **Cloud Functions**: Handles real-time route optimization and dynamic data processing.
 
-bash
-Copy code
-flutter pub get
-Run the application:
+## Installation
 
-bash
-Copy code
-flutter run
-Usage
-Create an Account: Users can sign up with their email and create an account to access personalized maps.
-Set Preferences: Mark important locations on the campus map to tailor the app to individual needs.
-Get Route Suggestions: Input two campus points, and the app will provide optimal walking routes and time estimates.
-Monetization Strategy
-Freemium Model: Basic features are free, while premium features like personalized maps and advanced route optimization are available via subscription.
-In-App Advertising: Local businesses can advertise within the app.
-Sponsorships: Partnerships with URI and local businesses for events or promotions.
-Target Audience
-Age Range: Primarily 18-25 (college students).
-Location: URI campus and surrounding areas.
-Profession: Students, especially freshmen or transfer students who are new to the campus.
-Contributing
-To contribute to this project:
+To run this project locally, follow these steps:
 
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes and commit (git commit -m "Add feature").
-Push to the branch (git push origin feature-branch).
-Open a pull request.
-License
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-repo/WalkPointURI.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd WalkPointURI
+    ```
+
+3. Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+
+4. Run the application:
+    ```bash
+    flutter run
+    ```
+
+## Usage
+1. **Create an Account**: Sign up with an email to access personalized maps.
+2. **Set Preferences**: Mark key campus locations on the map.
+3. **Get Route Suggestions**: Input two campus points, and the app will provide optimized walking routes and time estimates.
+
+## Monetization Strategy
+- **Freemium Model**: Free basic features, with premium options (e.g., personalized maps, advanced route optimization) available via subscription.
+- **In-App Advertising**: Local businesses can advertise in the app.
+- **Sponsorships**: Partner with URI or local businesses for promotions or events.
+
+## Target Audience
+- **Age Range**: Primarily 18-25 (college students).
+- **Location**: URI campus and nearby areas.
+- **Profession**: Students, especially freshmen or transfers new to campus.
+
+## Contributing
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m "Add feature"`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## License
 This project is licensed under the MIT License.
