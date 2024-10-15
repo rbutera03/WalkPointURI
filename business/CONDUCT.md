@@ -108,3 +108,5 @@ This Code of Conduct applies to all team interactions within and outside the off
 Members representing the team in any capacity are expected to uphold these standards.
 
 Adapted and inspired by the Contributor Covenant Code of Conduct.
+
+![Signature](./src/signature.png)
