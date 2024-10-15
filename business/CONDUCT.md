@@ -111,5 +111,6 @@ Adapted and inspired by the Contributor Covenant Code of Conduct.
 
 ![Butera Signature](../src/butera_signature.png)
 ![Golden Signature](../src/Golden_Signature.png)
+![Kerem Signature](../src/keremSign.png)
 ![Lawrence Signature](../src/Lawrence_Signature.png)
 
