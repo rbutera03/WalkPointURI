@@ -22,3 +22,11 @@ Observation 3:
 **Supporting Data:** 79.2% of 24 respondents agreed that Campus alerts (Notifies you about closed pathways or other campus events that might affect your route) 
 
 **Team Action:** Incorporate an alert system in some form that will tell users there is a change in pathing due to a detour or an event along the path to their classes, prioritizing this feature for further development based on the feedback from the group.
+
+Observation 4:
+
+**Observation Statement:** A good portion of users indicated that they would like the know the location of campus landmarks or directions based on landmarks.
+
+**Supporting Data:** 45.8% of 24 responses stated that "Landmark-based directions (Gives directions using familiar landmarks like statues or notable buildings)" was in their top 4 feutrues for the app, and multiple short answer comments mentioned it as well.
+
+**Team Action:** Add functionality for labeled landmarks and routes based on landmark descriptions.
