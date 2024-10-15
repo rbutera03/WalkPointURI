@@ -3,4 +3,4 @@ Observation 2:
 
 **Supporting Data:** 95.8% of 24 respondents agreed that personalized walking routes would be helpful in navigating the campus efficiently.
 
-**Team Action (if any):** Incorporate personalized walking route functionality into the WalkPoint app, prioritizing this feature for further development based on positive feedback from the focus group.
+**Team Action:** Incorporate personalized walking route functionality into the WalkPoint app, prioritizing this feature for further development based on positive feedback from the focus group.
