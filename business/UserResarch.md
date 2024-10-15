@@ -14,3 +14,11 @@ Observation 2:
 **Supporting Data:** 95.8% of 24 respondents agreed that personalized walking routes would be helpful in navigating the campus efficiently.
 
 **Team Action:** Incorporate personalized walking route functionality into the WalkPoint app, prioritizing this feature for further development based on positive feedback from the focus group.
+
+Observation 3:
+
+**Observation Statement:** The Majority of respondents found campus events/detours/alerts on their path to be highly usefaul
+
+**Supporting Data:** 79.2% of 24 respondents agreed that Campus alerts (Notifies you about closed pathways or other campus events that might affect your route) 
+
+**Team Action:** Incorporate an alert system in some form that will tell users there is a change in pathing due to a detour or an event along the path to their classes, prioritizing this feature for further development based on the feedback from the group.
