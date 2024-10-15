@@ -110,6 +110,6 @@ Members representing the team in any capacity are expected to uphold these stand
 Adapted and inspired by the Contributor Covenant Code of Conduct.
 
 ![Butera Signature](../src/butera_signature.png)
-![Golden Signature](../src/Screenshot 2024-10-15 144405.png)
+![Golden Signature](../src/Golden_Signature.png)
 ![Lawrence Signature](../src/Lawrence_Signature.png)
 
