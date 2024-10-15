@@ -1,4 +1,5 @@
 Observation 2:
+
 **Observation Statement:** The majority of respondents found personalized walking routes based on their schedules to be highly useful.
 
 **Supporting Data:** 95.8% of 24 respondents agreed that personalized walking routes would be helpful in navigating the campus efficiently.
