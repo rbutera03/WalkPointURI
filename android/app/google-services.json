@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "929360659052",
+    "project_id": "walkpointuri",
+    "storage_bucket": "walkpointuri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929360659052:android:9b68b6950343ed2780ce49",
+        "android_client_info": {
+          "package_name": "com.mycompany.walkpointuri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4DoQ4rT2ue_z76Mr6kamr3zhvGpCISEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
