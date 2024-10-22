@@ -5,7 +5,7 @@
 - Lawrence - Finished UI/UX design for the figma wireframe 
 
 # Accomplished:
-- 
+- Worked on screens in FlutterFlow
 
 # Working on:
-- 
+- finishing screens and functionality for sprint 1
