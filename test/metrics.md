@@ -5,4 +5,4 @@ Metric Collection:
 * Adoption - have firebase count amount of users that sign up for the app
 * DAU -
 * Retention -
-* CTR -
+* CTR - Create an individual event tracker to see how many users finish the golden path (get to the directions and map page) tracked through firebase.
