@@ -2,7 +2,7 @@ Heart Framework: https://docs.google.com/presentation/d/1dfqw9APvUui91hrw_YP164W
 
 Metric Collection:
 * NPS - have survey within the app asking the users to give it a rating on if they'd use the app again/recommend. 
-* Adoption -
+* Adoption - have firebase count amount of users that sign up for the app
 * DAU -
 * Retention -
 * CTR -
