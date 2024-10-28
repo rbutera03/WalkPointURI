@@ -20,7 +20,7 @@ Variations:
 Variation A: Background color is a background image (e.g., URI Campus).
 Variation B: Background color is a solid color (e.g., light gray).
 
-##Test Idea #3
+## Test Idea #3
 A/B Test Name: Route Naming: "Create Route" vs. "New Route"
 
 User Story Number: US3
