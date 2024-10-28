@@ -20,6 +20,36 @@ Variations:
 Variation A: Background color is a background image (e.g., URI Campus).
 Variation B: Background color is a solid color (e.g., light gray).
 
+Test Idea #3
+A/B Test Name: Route Naming: "Create Route" vs. "New Route"
+
+User Story Number: US3
+
+Metrics: User Engagement, Task Completion Rate, Bounce Rate
+
+Hypothesis:
+We aim to improve user clarity and task completion by testing the naming of a key route. My hypothesis is that users who see "Create Route" will understand the action better and complete tasks more effectively than those who see "New Route," leading to higher engagement and lower bounce rates.
+
+Experiment:
+
+Audiences:
+
+50% of users will see Variation A ("Create Route").
+50% of users will see Variation B ("New Route").
+Duration:
+
+2 weeks
+Randomization:
+
+Users will be randomly assigned to either variation using Firebase Remote Config.
+Tracking:
+
+Set up Firebase Analytics to monitor engagement and task completion rates for each variation. Key events to track include clicks on the route option, task completion within the route, and navigation bounce rate.
+Variations:
+
+Variation A: The route is labeled as "Create Route."
+Variation B: The route is labeled as "New Route."
+
 ## Test Idea #4
 A/B Test Name: App Rating: Use Again or Recommend to Others
 
