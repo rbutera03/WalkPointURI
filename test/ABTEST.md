@@ -1,6 +1,6 @@
 # Walk Point URI - A/B Testing Ideas
 
-#Test Idea 1
+##Test Idea #1
 A/B Test Name: Screen(s) Background Color
 
 User Story Number: US1
