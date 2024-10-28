@@ -20,6 +20,27 @@ Variations:
 Variation A: Background color is a background image (e.g., URI Campus).
 Variation B: Background color is a solid color (e.g., light gray).
 
+## Test Idea #2
+A/B Test Name: Login Landing Page: Routes Page vs. Map Page
+
+User Story Number: US2
+
+Metrics: User Engagement, Retention Rate, Task Completion
+
+Hypothesis: We aim to increase user engagement and retention by testing which landing page following login leads to a smoother user experience. My hypothesis is that users who land directly on the Routes Page will feel more guided and engaged with the app compared to those who start on the Map Page. This could lead to higher retention and task completion rates.
+
+Experiment:
+
+Audiences:
+50% of users will see Variation A (Routes Page).
+50% will see Variation B (Map Page) as the initial landing page post-login.
+Duration: 2 weeks
+Randomization: Users will be randomly assigned to either variation using Firebase Remote Config
+Tracking: Set up Firebase Analytics to monitor engagement, navigation flow, and time spent on the initial landing page. Key events to track include navigation from login, route/task initiation, and time spent on each page.
+
+Variation A: Users land on the Routes Page upon login.
+Variation B: Users land on the Map Page upon login.
+
 ## Test Idea #3
 A/B Test Name: Route Naming: "Create Route" vs. "New Route"
 
