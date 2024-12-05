@@ -1,0 +1,13 @@
+# December 5, 2024
+- Attendance: All
+
+# Daily Scrum:
+- Kerem: Added email confirmation to ensure real emails need to be used
+- Lawrence: Got a better weather API working, worked on planning for marketing website
+- Ryan B: Finsished Route edidting functionality 
+- Ryan G: Set up the figma and prepared for doing the two seperate maps 
+
+# Next Goals:
+- Get the website up and running. Needs marketing and user documentation
+- Finishing up the last couple feutuers (seperate maps for free select vs route)
+- Start working on the checklist for the final project
