@@ -7,5 +7,19 @@ service cloud.firestore {
       allow write: if true;
       allow delete: if false;
     }
+
+    match /buildings/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /routes/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
   }
 }

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDSVGt_r8WvLmA0JV7cikY6iLkwuSEjmhk</string>
+	<string>AIzaSyDwOZy0rv8zHBjMNBConfOV3ZnGLWavRcI</string>
 	<key>GCM_SENDER_ID</key>
 	<string>929360659052</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mycompany.walkpointuri</string>
+	<string>com.uricsc305.walkpointuri</string>
 	<key>PROJECT_ID</key>
 	<string>walkpointuri</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:929360659052:ios:a40be824508b6ef680ce49</string>
+	<string>1:929360659052:ios:073933a9fe4a820980ce49</string>
 </dict>
 </plist>

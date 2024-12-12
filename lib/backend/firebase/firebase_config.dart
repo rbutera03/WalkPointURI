@@ -10,7 +10,8 @@ Future initFirebase() async {
             projectId: "walkpointuri",
             storageBucket: "walkpointuri.appspot.com",
             messagingSenderId: "929360659052",
-            appId: "1:929360659052:web:1a54af75bf00587c80ce49"));
+            appId: "1:929360659052:web:1a54af75bf00587c80ce49",
+            measurementId: "G-NEW288L3Z2"));
   } else {
     await Firebase.initializeApp();
   }
