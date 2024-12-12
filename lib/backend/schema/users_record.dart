@@ -60,6 +60,16 @@ class UsersRecord extends FirestoreRecord {
   String get status => _status ?? '';
   bool hasStatus() => _status != null;
 
+  // "survey_score" field.
+  int? _surveyScore;
+  int get surveyScore => _surveyScore ?? 0;
+  bool hasSurveyScore() => _surveyScore != null;
+
+  // "taken_survey" field.
+  bool? _takenSurvey;
+  bool get takenSurvey => _takenSurvey ?? false;
+  bool hasTakenSurvey() => _takenSurvey != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -70,6 +80,8 @@ class UsersRecord extends FirestoreRecord {
     _grade = snapshotData['grade'] as String?;
     _gender = snapshotData['gender'] as String?;
     _status = snapshotData['status'] as String?;
+    _surveyScore = castToType<int>(snapshotData['survey_score']);
+    _takenSurvey = snapshotData['taken_survey'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -115,6 +127,8 @@ Map<String, dynamic> createUsersRecordData({
   String? grade,
   String? gender,
   String? status,
+  int? surveyScore,
+  bool? takenSurvey,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -127,6 +141,8 @@ Map<String, dynamic> createUsersRecordData({
       'grade': grade,
       'gender': gender,
       'status': status,
+      'survey_score': surveyScore,
+      'taken_survey': takenSurvey,
     }.withoutNulls,
   );
 
@@ -146,7 +162,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.phoneNumber == e2?.phoneNumber &&
         e1?.grade == e2?.grade &&
         e1?.gender == e2?.gender &&
-        e1?.status == e2?.status;
+        e1?.status == e2?.status &&
+        e1?.surveyScore == e2?.surveyScore &&
+        e1?.takenSurvey == e2?.takenSurvey;
   }
 
   @override
@@ -159,7 +177,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.phoneNumber,
         e?.grade,
         e?.gender,
-        e?.status
+        e?.status,
+        e?.surveyScore,
+        e?.takenSurvey
       ]);
 
   @override

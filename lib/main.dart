@@ -1,3 +1,4 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -8,7 +9,8 @@ import 'auth/firebase_auth/auth_util.dart';
 import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'flutter_flow/internationalization.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'index.dart';
 
 void main() async {
@@ -16,13 +18,22 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
+  final environmentValues = FFDevEnvironmentValues();
+  await environmentValues.initialize();
+
   await initFirebase();
 
-  runApp(const MyApp());
+  final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
+
+  runApp(ChangeNotifierProvider(
+    create: (context) => appState,
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, this.entryPage});
 
   // This widget is the root of your application.
   @override
@@ -30,9 +41,13 @@ class MyApp extends StatefulWidget {
 
   static _MyAppState of(BuildContext context) =>
       context.findAncestorStateOfType<_MyAppState>()!;
+
+  final Widget? entryPage;
 }
 
 class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+
   ThemeMode _themeMode = ThemeMode.system;
 
   late AppStateNotifier _appStateNotifier;
@@ -47,7 +62,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
 
     _appStateNotifier = AppStateNotifier.instance;
-    _router = createRouter(_appStateNotifier);
+    _router = createRouter(_appStateNotifier, widget.entryPage);
     userStream = walkPointURIFirebaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
@@ -66,6 +81,10 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 
+  void setLocale(String language) {
+    safeSetState(() => _locale = createLocale(language));
+  }
+
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
       });
@@ -75,13 +94,33 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       title: 'WalkPointURI',
       localizationsDelegates: const [
+        FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
+        FallbackMaterialLocalizationDelegate(),
+        FallbackCupertinoLocalizationDelegate(),
       ],
-      supportedLocales: const [Locale('en', '')],
+      locale: _locale,
+      supportedLocales: const [
+        Locale('en'),
+      ],
       theme: ThemeData(
         brightness: Brightness.light,
+        scrollbarTheme: ScrollbarThemeData(
+          thumbVisibility: WidgetStateProperty.all(false),
+          trackVisibility: WidgetStateProperty.all(false),
+          interactive: false,
+          thumbColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.dragged)) {
+              return const Color(0xff002147);
+            }
+            if (states.contains(WidgetState.hovered)) {
+              return const Color(0xff002147);
+            }
+            return const Color(0xff002147);
+          }),
+        ),
         useMaterial3: false,
       ),
       themeMode: _themeMode,
@@ -115,21 +154,15 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
+      'RIPTA_Next_Bus': const RIPTANextBusWidget(),
       'MyRoutes': const MyRoutesWidget(),
-      'MapView': const MapViewWidget(),
+      'freeViewMap': const FreeViewMapWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
-    final MediaQueryData queryData = MediaQuery.of(context);
-
     return Scaffold(
-      body: MediaQuery(
-          data: queryData
-              .removeViewInsets(removeBottom: true)
-              .removeViewPadding(removeBottom: true),
-          child: _currentPage ?? tabs[_currentPageName]!),
-      extendBody: true,
-      bottomNavigationBar: FloatingNavbar(
+      body: _currentPage ?? tabs[_currentPageName],
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => safeSetState(() {
           _currentPage = null;
@@ -138,63 +171,45 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: FlutterFlowTheme.of(context).secondary,
         selectedItemColor: const Color(0xFF68ABE8),
         unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
-        selectedBackgroundColor: const Color(0x00000000),
-        borderRadius: 8.0,
-        itemBorderRadius: 8.0,
-        margin: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        width: double.infinity,
-        elevation: 0.0,
-        items: [
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 0
-                      ? Icons.route_rounded
-                      : Icons.route_outlined,
-                  color: currentIndex == 0
-                      ? const Color(0xFF68ABE8)
-                      : FlutterFlowTheme.of(context).secondaryText,
-                  size: currentIndex == 0 ? 24.0 : 24.0,
-                ),
-                Text(
-                  'Routes',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 0
-                        ? const Color(0xFF68ABE8)
-                        : FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.directions_bus,
+              size: 24.0,
             ),
+            activeIcon: Icon(
+              Icons.directions_bus_outlined,
+              size: 24.0,
+            ),
+            label: 'Bus Routes',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.map,
-                  color: currentIndex == 1
-                      ? const Color(0xFF68ABE8)
-                      : FlutterFlowTheme.of(context).secondaryText,
-                  size: 24.0,
-                ),
-                Text(
-                  'Map',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? const Color(0xFF68ABE8)
-                        : FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.route_outlined,
+              size: 24.0,
             ),
+            activeIcon: FaIcon(
+              FontAwesomeIcons.route,
+              size: 24.0,
+            ),
+            label: 'Routes',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.map,
+              size: 24.0,
+            ),
+            activeIcon: FaIcon(
+              FontAwesomeIcons.mapMarkedAlt,
+              size: 24.0,
+            ),
+            label: 'Home',
+            tooltip: '',
           )
         ],
       ),

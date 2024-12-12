@@ -16,6 +16,31 @@
       "api_key": [
         {
           "current_key": "AIzaSyD4DoQ4rT2ue_z76Mr6kamr3zhvGpCISEY"
+        },
+        {
+          "current_key": "AIzaSyAwhO_TGw9kU2i_oRxvOhub9e1Yb2PoOGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929360659052:android:9949303372cacf0580ce49",
+        "android_client_info": {
+          "package_name": "com.uricsc305.walkpointuri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4DoQ4rT2ue_z76Mr6kamr3zhvGpCISEY"
+        },
+        {
+          "current_key": "AIzaSyAwhO_TGw9kU2i_oRxvOhub9e1Yb2PoOGs"
         }
       ],
       "services": {

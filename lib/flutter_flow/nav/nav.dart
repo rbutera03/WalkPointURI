@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -68,18 +69,20 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
+GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
+    GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const NavBarPage() : const LoginWidget(),
+          appStateNotifier.loggedIn ? entryPage ?? const NavBarPage() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const NavBarPage() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? entryPage ?? const NavBarPage()
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'SignUp',
@@ -89,19 +92,48 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'MyRoutes',
           path: '/myRoutes',
+          asyncParams: {
+            'routesDoc': getDoc(['routes'], RoutesRecord.fromSnapshot),
+            'buildingsDoc': getDoc(['buildings'], BuildingsRecord.fromSnapshot),
+          },
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'MyRoutes')
-              : const NavBarPage(
+              : NavBarPage(
                   initialPage: 'MyRoutes',
-                  page: MyRoutesWidget(),
+                  page: MyRoutesWidget(
+                    routesDoc: params.getParam(
+                      'routesDoc',
+                      ParamType.Document,
+                    ),
+                    buildingsDoc: params.getParam(
+                      'buildingsDoc',
+                      ParamType.Document,
+                    ),
+                  ),
                 ),
         ),
         FFRoute(
-          name: 'MapView',
-          path: '/mapView',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'MapView')
-              : const MapViewWidget(),
+          name: 'routeViewMap',
+          path: '/routeViewMap',
+          requireAuth: true,
+          builder: (context, params) => RouteViewMapWidget(
+            startLat: params.getParam(
+              'startLat',
+              ParamType.double,
+            ),
+            startLng: params.getParam(
+              'startLng',
+              ParamType.double,
+            ),
+            endLat: params.getParam(
+              'endLat',
+              ParamType.double,
+            ),
+            endLng: params.getParam(
+              'endLng',
+              ParamType.double,
+            ),
+          ),
         ),
         FFRoute(
           name: 'AccountCreation',
@@ -112,6 +144,78 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Login',
           path: '/login',
           builder: (context, params) => const LoginWidget(),
+        ),
+        FFRoute(
+          name: 'Survey',
+          path: '/survey',
+          requireAuth: true,
+          builder: (context, params) => const SurveyWidget(),
+        ),
+        FFRoute(
+          name: 'AccountSettings',
+          path: '/accountSettings',
+          requireAuth: true,
+          builder: (context, params) => const AccountSettingsWidget(),
+        ),
+        FFRoute(
+          name: 'NewRoute',
+          path: '/newRoute',
+          requireAuth: true,
+          asyncParams: {
+            'buildings': getDoc(['buildings'], BuildingsRecord.fromSnapshot),
+          },
+          builder: (context, params) => NewRouteWidget(
+            buildings: params.getParam(
+              'buildings',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'EditRoute',
+          path: '/editRoute',
+          requireAuth: true,
+          asyncParams: {
+            'routeDoc': getDoc(['routes'], RoutesRecord.fromSnapshot),
+            'startDoc': getDoc(['buildings'], BuildingsRecord.fromSnapshot),
+            'endDoc': getDoc(['buildings'], BuildingsRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditRouteWidget(
+            routeRef: params.getParam(
+              'routeRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['routes'],
+            ),
+            routeDoc: params.getParam(
+              'routeDoc',
+              ParamType.Document,
+            ),
+            startDoc: params.getParam(
+              'startDoc',
+              ParamType.Document,
+            ),
+            endDoc: params.getParam(
+              'endDoc',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'RIPTA_Next_Bus',
+          path: '/rIPTANextBus',
+          requireAuth: true,
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'RIPTA_Next_Bus')
+              : const RIPTANextBusWidget(),
+        ),
+        FFRoute(
+          name: 'freeViewMap',
+          path: '/freeViewMap',
+          requireAuth: true,
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'freeViewMap')
+              : const FreeViewMapWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -296,15 +400,11 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
-                    ),
+              ? Container(
+                  color: FlutterFlowTheme.of(context).primary,
+                  child: Image.asset(
+                    'assets/images/WalkPointLogoAnimated.gif',
+                    fit: BoxFit.contain,
                   ),
                 )
               : page;

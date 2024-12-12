@@ -1,7 +1,0 @@
-# November 21, 2024
-- Attendance: -Ryan G, missed alarm (all good)
-
-# Daily Scrum:
-- Kerem: Working on setting up the building database using ChatGTP
-- Lawrence: Weather working correctly, now working on hand-making the building datatabse in case ChatGTP can't do it correctly. 
-- Ryan B: Finished Developer Enviornment assignment, starting to set up route configuration in the backend/new route page
