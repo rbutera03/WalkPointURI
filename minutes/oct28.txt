@@ -1,0 +1,20 @@
+# October 28, 2024
+- Attendance: All
+
+# Daily Scurm:
+- Lawrence - Created survey on FlutterFlow, waiting on merge to main branch, finished A/B test
+- Ryan G - Looked at leaflet, doesn't look great for our project 
+- Kerem - Working on the action buttons for flutterflow and firebase backend
+
+# Accomplished:
+- Finished the A/B testing file
+- Made custom firebase events to track CTR and retention, waiting for them to appear in backend.
+
+# Working on:
+- Assignment 8:
+  - wait for events to show up in firebase.
+  - Go through and create an account and screenshot points of metrics along the way.
+
+- Work on getting the Golden Path done and working for the end of this week. 
+  - Lawrence was working on getting the map set up.
+  - The rest of us should make our own branches and try and get it to work as well.

@@ -1,0 +1,16 @@
+# November 14, 2024
+- Attendance: All
+
+# Daily Scrum:
+- Kerem: Tested app working in emulators
+- Ryan B: Did the tests for assignment 9 in flutterflow
+- Ryan G: Got a new map software up and running in the app
+
+# Working on:
+- Lawrence and Kerem are going to present: Kerem Front End/Lawrence Back End
+- Ryan G - Get routing/creating routes working in the app for the presentation on moday
+- Lawrence - QoL updates (weather and day of the week), manual creating location database in the backed
+- Ryan B - Setting up Google Play store internal testing
+- Kerem - Creating new page and backend set up for route creation
+
+

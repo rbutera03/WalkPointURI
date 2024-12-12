@@ -1,0 +1,40 @@
+# December 9, 2024
+- Attendance: All
+
+# Daily Scrum:
+- Lawrence: Finished making the new logo, finished making the draft for the marketing website
+- Ryan G: Finished adding seperate map pages, bug fixes, delete confirmation
+
+# Working on:
+- Lawrence: Fix the small logo issue, RIPTA page (if you have time), working more on the marketing page
+- Kerem: Mergining in email functionality, doing the User Story Google Slide Frameworks for all implemented User Stores 
+         (Ryan B will update you once done with orginzation of PBI cards)
+- Ryan B: Adding the daily/full view to the routes page, sorting/combing through the PBI cards
+- Ryan G: Small tweaks the app, adding missing buildings, update logos once Lawrence is done
+  
+# Final Project Checklist:
+1. FlutterFlow Project [Team] - Almost done
+   - Soft deadline for finishing implentation is Wednesday (December 11)
+   - Once it's done Ryan B will push final version to GitHub and GooglePlay Console
+2. GitHub Project [Team] - Good Shape
+   - Ryan B will organize the KanBan Board to make it look more oganized/figure out User Stories
+   - Waiting for final version of the app to get pushed 
+3. Manual Test Of Your Team's App [Team] - Not Started (should be easy)
+   - Screenshot of App working on Phone (Lawrence) [Wating for final app version]
+   - Screenshots of emulation on 2 phones and 1 tablet [Kerem] [Waiting for final app verion]
+4. UI Test Of Your Team’s App. [Individual]
+   - Everyone has to individually run a Robotest in the backend (Ask Ryan B for help if needed)
+5. QA (Unit) Testing Of Your Team's App [Individual and Team] - Needs the most work
+   - All done user stories need a Test Case Slide in the TESTCASES.md file (Kerem filling those out)
+   - Each of us has to do an automated test throught flutterflow for a user story (user stroy 2 is done)
+6. Beta Test Of Your Team's App [Team] - Waiting for more information
+7. Marketing and User Documentation Site [Team] - In Progress
+   - Lawrence taking the lead on this, if you need help let us know
+8. Complete Team Repo [Team] - Needs work
+   - Canonical Folders: Should be good once app is pushed 
+   - Developer Documentation. Wiki described in Chapter 10.2. (need someone working on this)
+   - Buisness Plan: Must have updated BUISNESSPLAN.md (need someone to work on this/double check it)
+9. Metrics and Analytics [Team and Individual] - Basically done
+   - Need to show our HEART Framework and metric collection
+     - This is pretty much done because we already did this for an assignment and havent changed much
+  

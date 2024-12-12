@@ -1,0 +1,10 @@
+# November 25, 2024
+- Attendance: -All
+
+# Daily Scrum:
+- Kerem: Made a CSV file of all the buidling on campus
+- Ryan G: Added the building to a colleciton in flutterflow, got the route creation to work 
+          and display on the MyRoutes page
+
+# Next Goals:
+- 

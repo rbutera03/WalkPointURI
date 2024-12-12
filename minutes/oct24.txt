@@ -1,0 +1,24 @@
+# October 24, 2024
+Attendance - All
+
+# Daily Scrum:
+- No updates since last meeting
+
+# Accomplished: 
+- finished the markdown.md file 
+- came up with A/B test ideas
+
+# Working on:
+- Before monday class:
+  - individually complete the designated A/B scenario from the SCRUM board
+  - start working on implementing the features into the app
+    - Get a map into the app, if possible so we can see ourselves correcty on the map, 
+        if not we have another week. Lawrence said he'd look at this
+    - Survey asking the users to rank the app, needed for NPS metric. Ryan G said he'd work on this.
+    - Adding actions to keep track of retention and click through, start/end of golden path and sign up.
+        Kerem said he'd work on this.
+    - If anyone needs help or gets stuck let me know and I can help (Ryan B)
+
+- For monday class:
+  - Complete assignment by showing the metric features working with screenshots
+  - If needed we can finish the implentation during class, but it would be nice to get ahead

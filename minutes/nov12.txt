@@ -1,0 +1,19 @@
+# November 12, 2024
+- Attendance: All
+
+# Daily Scrum:
+- Kerem: Working on the emulator doc, working on US2, FlutterFlow tests
+- Ryan B: Finished Robo Testing Doc
+- Lawrence: Got a routing system to work, but only for vehicles 
+- Ryan G: Working on getting map/location to work
+
+# Working on:
+- Finish Assignment 9 
+  - Emulators Doc
+  - Unit Testing frameworks
+  - FlutterFlow unit tests
+  - Due Tonight
+- Continue working on app
+  - See if routing can work with walking instead of vheicles
+  - Display location on the map
+  - Hopefully have these working for next Monday for the show and tell

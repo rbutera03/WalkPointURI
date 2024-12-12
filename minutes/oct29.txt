@@ -1,0 +1,14 @@
+# October 29, 2024
+- Attendance: All
+
+# Daily Scurm:
+- Metrics succesfully updated, went over what we need to get done for the individual documents for that portion of assignment 8
+- Continuing to work on getting golden path working
+
+# Accomplished:
+- Worked on getting map implentation
+- Fixed a few UI issue
+
+# Working on:
+- Submitting assignment 8 tomorrow with metrics filled out
+- Continue trying to figure out map and route settings
