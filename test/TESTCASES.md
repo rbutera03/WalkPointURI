@@ -11,3 +11,7 @@ https://docs.google.com/presentation/d/1FKMR7Yc97sOE6Y-QGAxcecuPMgg49OZr39LC6o6c
 https://docs.google.com/presentation/d/1FTRiLC_W2v70IVZ2O_aJIsA6IBlVZ5yY_uiK9wHwtNY/edit?usp=sharing US6: Show Weather, Date and Day
 
 https://docs.google.com/presentation/d/1e639WK8t15WM_qLyly1mbS_7DtObbiTHmYO_AD5SRtg/edit?usp=sharing US7: Edit Route
+
+https://docs.google.com/presentation/d/1FnTjEpwXfDHBBhdWDaC3hHx8oyfvg52WuQyrrpB7Jkw/edit?usp=sharing US8: Delete Route
+
+https://docs.google.com/presentation/d/1y3BjpIAwPUGdXA6n4GKkrH_kzYynP8PGsDhkvpVD1bU/edit?usp=sharing US9: Add Email Verification
