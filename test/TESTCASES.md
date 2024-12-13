@@ -15,3 +15,9 @@ https://docs.google.com/presentation/d/1e639WK8t15WM_qLyly1mbS_7DtObbiTHmYO_AD5S
 https://docs.google.com/presentation/d/1FnTjEpwXfDHBBhdWDaC3hHx8oyfvg52WuQyrrpB7Jkw/edit?usp=sharing US8: Delete Route
 
 https://docs.google.com/presentation/d/1y3BjpIAwPUGdXA6n4GKkrH_kzYynP8PGsDhkvpVD1bU/edit?usp=sharing US9: Add Email Verification
+
+https://docs.google.com/presentation/d/1P3ekI9juVoL1Z7_QxtNfg6PubrS8ecgkIl6rE0iq470/edit?usp=sharing US10: Toggle Viewing All Routes/Daily Routes
+
+https://docs.google.com/presentation/d/1rXzg5RBuBvPuzEW4iS6WJOtUz2TrwqiTviyKxut58E8/edit?usp=sharing US11: Free Map with Route Creation
+
+https://docs.google.com/presentation/d/1I_b6zDvvWRTZ5y0zerALEXFeOxqLT5Bmis1RQcbRrNA/edit?usp=sharing US12: Add RIPTA Bus/Ram busses Routes/Schedules
